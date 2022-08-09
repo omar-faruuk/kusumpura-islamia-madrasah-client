@@ -1,0 +1,10 @@
+#importantLink ul li a {
+    color: white;
+    font-weight: lighter;
+
+}
+
+#footer {
+    background-color: rgb(18, 52, 64);
+    padding: 2rem 1rem;
+}
