@@ -47,6 +47,10 @@ const Contact = styled.div`
     
 }
 `
+const Img = styled.img`
+width: 100%;
+object-fit: cover;
+`
 const ImportantLink = () => {
     const [allNotice, setAllNotice] = useState([])
     const { not } = useContext(userContex);
@@ -60,16 +64,6 @@ const ImportantLink = () => {
     return (
         <div className="container-fluid mt-5 " id='footer'>
             <Row className="row" id='importantLink'>
-                <div className="col-md-3 { userContex } from './../App';
-                 d-3">
-
-                    <h4 className='bg-success text-white p-2'>ডাউনলোড লিংক</h4>
-                    <ul className='text-white'>
-                        <li><a href="#">কুসুমপুরা ইসলামিয়া দাখিল মাদ্রাসা ভর্তি ফরম ২০২২।</a></li>
-
-
-                    </ul>
-                </div>
                 <div className="col-md-3 ">
                     <h4 className='bg-success text-white p-2'>নোটিশ বোর্ড</h4>
                     <ul className='text-white'>
@@ -92,7 +86,7 @@ const ImportantLink = () => {
                         <li><a target="_blank" href="https://www.facebook.com/kidm2019">কুসুমপুরা ইসলামিয়া মাদ্রাসা ফেসবুক পেজ।</a></li>
                         <li><a target="_blank" href="https://www.jasa.edu.bd/#">জামেয়া আহমদিয়া সুন্নিয়া কামিল মাদরাসা।</a></li>
                         <li><a target="_blank" href="http://www.educationboard.gov.bd/">বাংলাদেশ মাধ্যমিক ও উচ্চ মাধ্যমিক শিক্ষা বোর্ড।</a></li>
-                        <li><a target="_blank" href="http://patiya.chittagong.gov.bd/">পটিয়া উপজে।</a></li>
+                        <li><a target="_blank" href="http://patiya.chittagong.gov.bd/">পটিয়া উপজেলা।</a></li>
                         <li><a target="_blank" href="http://kusumpuraup.chittagong.gov.bd/">কুসুমপুরা ইউনিয়ন পরিষদ।</a></li>
 
 
@@ -114,6 +108,9 @@ const ImportantLink = () => {
                     </div>
 
                 </Contact>
+                <div className="col-md-3">
+                    <a  target="_blank" href="https://goo.gl/maps/J8MyWg1HbcVK7Pry6"><Img className='rounded' src="/teachers/maps.png" alt="" /></a>
+                </div>
             </Row>
         </div>
     );

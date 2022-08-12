@@ -33,6 +33,8 @@ import ManageProject from './Components/Admin/ManageProject';
 import Download from './Components/Download';
 import AddFunding from './Components/Admin/AddFunding';
 import AddEvent from './Components/Admin/AddEvent';
+import AddTalk from './Components/Admin/AddTalk';
+import ManageTalk from './Components/Admin/ManageTalk';
 
 
 export const userContex = createContext()
@@ -66,7 +68,7 @@ function App() {
           <Route path="showProject" element={<ShowProject />} />
           <Route path="download" element={<Download />} />
 
-         {isAdmin &&  <Route path="admin" element={<PrivateRoute><Admin /></PrivateRoute>}>
+           <Route path="admin" element={<PrivateRoute><Admin /></PrivateRoute>}>
             <Route path="manage-teacher" element={<PrivateRoute><ManageTeacher /></PrivateRoute>} />
             <Route path='image-gallery' element={<PrivateRoute><ImgGallery /></PrivateRoute>} />
             <Route path='history' element={<PrivateRoute><AddHistory /></PrivateRoute>} />
@@ -82,10 +84,12 @@ function App() {
             <Route path='project' element={<PrivateRoute><Project /></PrivateRoute>} />
             <Route path='manage-project' element={<PrivateRoute><ManageProject /></PrivateRoute>} />
             <Route path='addEvent' element={<PrivateRoute><AddEvent /></PrivateRoute>} />
+            <Route path='add-talk' element={<PrivateRoute><AddTalk /></PrivateRoute>} />
+            <Route path='manage-talk' element={<PrivateRoute><ManageTalk /></PrivateRoute>} />
 
           </Route>
 
-  } 
+   
 
         </Routes>
       </BrowserRouter>

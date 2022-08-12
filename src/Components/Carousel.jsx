@@ -58,8 +58,8 @@ const Carousel = () => {
         console.log(ev.image)
     }
     return (
-        <Container className='container mt-3'>
-            <div className="row g-md-0 g-2 d-flex flex-md-row flex-column-reverse">
+        <Container className='container-fluid mt-3'>
+            <div className="row g-md-2 g-2 d-flex justify-content-between flex-md-row flex-column-reverse">
                 <div className="col-md-8">
                     {banner.length ? <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="true">
                         <div className="carousel-indicators">

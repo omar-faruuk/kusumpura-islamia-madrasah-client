@@ -53,6 +53,12 @@ const Admin = () => {
               <MenuItem icon={<FontAwesomeIcon icon={faDiagramPredecessor} />}>
                 <Link className='text-dark' to='manage-teacher'>Manage Teacher</Link>
               </MenuItem>
+              <MenuItem icon={<FontAwesomeIcon icon={faPlus} />}>
+                <Link className='text-dark' to='add-talk'>Add Talk</Link>
+              </MenuItem>
+              <MenuItem icon={<FontAwesomeIcon icon={faDiagramPredecessor} />}>
+                <Link className='text-dark' to='manage-talk'>Manage Talk</Link>
+              </MenuItem>
               <MenuItem icon={<FontAwesomeIcon icon={faDiagramPredecessor} />}>
                 <Link className='text-dark' to='addResult'>Add result</Link>
               </MenuItem>

@@ -123,7 +123,7 @@ const AddEvent = () => {
 
     // delete image from database
     const handleDelete = (e, id) => {
-        axios.delete(`http://localhost:5000/deleteEvent/${id}`)
+        axios.delete(`https://secret-badlands-60025.herokuapp.com/deleteEvent/${id}`)
             .then(res => {
                 if (res.status === 200) {
                     swal("Great!", "successfully deleted the image!", "success");
