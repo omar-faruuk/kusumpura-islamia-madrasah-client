@@ -8,8 +8,8 @@ const PrivateRoute = ({ children }) => {
     const [logedInUser] = login
     const location = useLocation()
 
-    // const auth2 = logedInUser.name || logedInUser.email || sessionStorage.getItem('token'); 
-    const auth2 = true
+    const auth2 = logedInUser.name || logedInUser.email || sessionStorage.getItem('token'); 
+    // const auth2 = true
     return auth2 ? children :
         <Navigate to={'/login'} state={{ from: location }} replace />
 };

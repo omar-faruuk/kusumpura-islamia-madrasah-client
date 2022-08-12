@@ -37,14 +37,14 @@ const AddTalk = ({ updateTalk, setUpdateTalk }) => {
         if (!updateTalk) {
             axios.post('http://localhost:5000/addTalk', talkData)
                 .then(res => {
-                    swal("Great!", "successfully added a teacher!", "success");
+                    swal("Great!", "successfully added a quote!", "success");
                     navigate("../manage-talk", { replace: true })
                 })
                 .catch(err => console.log(err))
         } else (
             axios.patch(`http://localhost:5000/updateTalk/${updateTalk._id}`, talkData)
                 .then(res => {
-                    swal("Great!", "successfully updated the teacher!", "success");
+                    swal("Great!", "successfully updated the quote!", "success");
                     navigate("../manage-talk",)
                     setUpdateTalk({})
                 })

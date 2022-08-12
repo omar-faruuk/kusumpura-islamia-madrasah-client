@@ -54,7 +54,7 @@ const Image = styled.img`
    border-radius: 50%;
    object-fit: cover;
    @media screen and (max-width:568px){
-      height: 400px;
+      height: 450px;
    }
 `
 const TitleWrapper = styled.div`
@@ -116,7 +116,7 @@ const Testimonial = () => {
                 <Swiper
                     modules={[Navigation, Autoplay, Virtual, Pagination]}
                     navigation
-                    autoplay={{ delay: 8000, }}
+                    autoplay={{ delay: 5000, }}
                     pagination={{ clickable: true }}
                     loop={true}
                     slidesPerView={3}
@@ -125,6 +125,7 @@ const Testimonial = () => {
                         320: {
                             slidesPerView: 1,
                             spaceBetween: 2,
+                            
                             
                         },
                         768: {
@@ -140,9 +141,9 @@ const Testimonial = () => {
                     className="mySwiper"
                 >
                     {
-                        talks.map(testi => <SwiperSlide key={testi.id}>
+                        talks.map(testi => <SwiperSlide className='col-md-4' key={testi.id}>
                             <Card className="card">
-                                <Image src={testi.image} className="card-img-top" alt="..." />
+                                <Image src={testi.image} className="card-img-top img-fluid" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title text-center">{testi.name}</h5>
                                     <p className='text-center mb-0'>{testi.position}</p>

@@ -104,11 +104,12 @@ const ImportantLink = () => {
                         <span>Follow on</span>
                         <a target="_blank" href="https://www.facebook.com/kidm2019"><Icon><FontAwesomeIcon icon={faFacebook} /></Icon></a>
                         <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/kidm.2019/"><Icon><FontAwesomeIcon icon={faInstagram} /></Icon></a>
+                        <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox"><Icon><FontAwesomeIcon icon={faMessage} /></Icon></a>
 
                     </div>
 
                 </Contact>
-                <div className="col-md-3">
+                <div className="col-md-3 mt-3 mt-md-0">
                     <a  target="_blank" href="https://goo.gl/maps/J8MyWg1HbcVK7Pry6"><Img className='rounded' src="/teachers/maps.png" alt="" /></a>
                 </div>
             </Row>

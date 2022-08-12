@@ -19,7 +19,7 @@ const ManageTalk = () => {
     const [Talks, setTalks] = useState([])
     const [updateTalk, setUpdateTalk] = useState({})
     useEffect(() => {
-        axios.get('http://localhost:5000/Talks')
+        axios.get('https://secret-badlands-60025.herokuapp.com/Talks')
             .then(res => {
                 console.log(res.data);
                 setTalks(res.data)
@@ -30,7 +30,7 @@ const ManageTalk = () => {
         setUpdateTalk(Talk)
     }
     const handleDelete = (e, id) => {
-        axios.delete(`http://localhost:5000/deleteTalk/${id}`)
+        axios.delete(`https://secret-badlands-60025.herokuapp.com/deleteTalk/${id}`)
             .then(res => {
                 if (res.status === 200) {
                     swal("Great!", "successfully deleted the Talk!", "success");

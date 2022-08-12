@@ -16,6 +16,8 @@ const Div = styled.div`
 `
 const Icon = styled.span`
  margin-left: 16px;
+ /* background-color: black; */
+ color: black;
 `
 
 const Contact = () => {
@@ -35,9 +37,9 @@ const Contact = () => {
                         </ul>
                         <div className='d-flex fs-2'>
                             <span>Follow on</span>
-                            <Icon><FontAwesomeIcon icon={faFacebook} /></Icon>
-                            <Icon><FontAwesomeIcon icon={faInstagram} /></Icon>
-                            <Icon><FontAwesomeIcon icon={faMessage} /></Icon>
+                            <a target="_blank" href="https://www.facebook.com/kidm2019"><Icon><FontAwesomeIcon icon={faFacebook} /></Icon></a>
+                            <a target="_blank" href="https://www.instagram.com/accounts/login/?next=/kidm.2019/"><Icon><FontAwesomeIcon icon={faInstagram} /></Icon></a>
+                            <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox"><Icon><FontAwesomeIcon icon={faMessage} /></Icon></a>
                         </div>
 
                     </Div>

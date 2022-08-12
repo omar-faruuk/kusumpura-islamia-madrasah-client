@@ -68,7 +68,7 @@ function App() {
           <Route path="showProject" element={<ShowProject />} />
           <Route path="download" element={<Download />} />
 
-           <Route path="admin" element={<PrivateRoute><Admin /></PrivateRoute>}>
+          {isAdmin && <Route path="admin" element={<PrivateRoute><Admin /></PrivateRoute>}>
             <Route path="manage-teacher" element={<PrivateRoute><ManageTeacher /></PrivateRoute>} />
             <Route path='image-gallery' element={<PrivateRoute><ImgGallery /></PrivateRoute>} />
             <Route path='history' element={<PrivateRoute><AddHistory /></PrivateRoute>} />
@@ -88,8 +88,8 @@ function App() {
             <Route path='manage-talk' element={<PrivateRoute><ManageTalk /></PrivateRoute>} />
 
           </Route>
+          }
 
-   
 
         </Routes>
       </BrowserRouter>
