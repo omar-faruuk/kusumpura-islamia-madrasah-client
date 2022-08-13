@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { faFacebook, faInstagram, } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled from 'styled-components';
-import { faLocation, faMessage, faPhone, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faLocation, faMessage, faPhone, faCalendarAlt, faMap, faMapMarker, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { userContex } from '../App';
@@ -62,7 +62,7 @@ const ImportantLink = () => {
     }, [])
 
     return (
-        <div className="container-fluid mt-5 " id='footer'>
+        <div className="container-fluid mt-5 pb-2" id='footer'>
             <Row className="row" id='importantLink'>
                 <div className="col-md-3 ">
                     <h4 className='bg-success text-white p-2'>নোটিশ বোর্ড</h4>
@@ -110,6 +110,7 @@ const ImportantLink = () => {
 
                 </Contact>
                 <div className="col-md-3 mt-3 mt-md-0">
+                    <h3 className='text-white'>Find location<FontAwesomeIcon className='ms-2' icon={faMapMarkerAlt} /></h3>
                     <a  target="_blank" href="https://goo.gl/maps/J8MyWg1HbcVK7Pry6"><Img className='rounded' src="/teachers/maps.png" alt="" /></a>
                 </div>
             </Row>

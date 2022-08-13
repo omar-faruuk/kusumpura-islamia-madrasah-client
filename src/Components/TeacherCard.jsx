@@ -4,6 +4,7 @@ const Img = styled.img`
  height: 100%;
  object-fit: cover;
  width: 100%;
+ /* border-radius: 50%; */
 `
 const Card = styled.div`
 @media screen and (max-width:568px) {

@@ -35,14 +35,14 @@ const AddTalk = ({ updateTalk, setUpdateTalk }) => {
             image: !updateTalk || (updateTalk && imgUrl) ? imgUrl : updateTalk.image
         }
         if (!updateTalk) {
-            axios.post('http://localhost:5000/addTalk', talkData)
+            axios.post('https://secret-badlands-60025.herokuapp.com/addTalk', talkData)
                 .then(res => {
                     swal("Great!", "successfully added a quote!", "success");
                     navigate("../manage-talk", { replace: true })
                 })
                 .catch(err => console.log(err))
         } else (
-            axios.patch(`http://localhost:5000/updateTalk/${updateTalk._id}`, talkData)
+            axios.patch(`https://secret-badlands-60025.herokuapp.com/updateTalk/${updateTalk._id}`, talkData)
                 .then(res => {
                     swal("Great!", "successfully updated the quote!", "success");
                     navigate("../manage-talk",)

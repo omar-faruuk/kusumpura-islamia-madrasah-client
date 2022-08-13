@@ -33,6 +33,7 @@ text-align: center;
 `
 const H1 = styled.h1`
 font-weight: bold;
+color: #3827a5;
 @media screen and (max-width:568px) {
     font-size: 22px;
 }
@@ -66,7 +67,7 @@ const TopHeader = () => {
                 <Name>
 
                     <H2 className='text-success'>.المدرسة الاسلامية الداخل کوشمفورا</H2>
-                    <H1>কুসুমপুরা ইসলামিয়া দাখিল মাদ্রাসা।</H1>
+                    <H1 className=''>কুসুমপুরা ইসলামিয়া দাখিল মাদ্রাসা।</H1>
                     <H3 className='fw-2'>Kusumpura Islamia dakhil Madrasah.</H3>
                 </Name>
             </Wrapper>

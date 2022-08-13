@@ -22,7 +22,7 @@ const TitleWrapper = styled.div`
     position: absolute;
     right: 0;
     text-align: center;
-    width: 200px;
+    width: 400px;
     
  };
  &::after{
@@ -73,7 +73,7 @@ const Teacher = () => {
                     <Swiper
                         modules={[Navigation, Autoplay, Virtual, Pagination]}
                         navigation
-                        autoplay={{ delay: 8000, }}
+                        autoplay={{ delay: 2000, }}
                         pagination={{ clickable: true }}
                         loop={true}
                         // autoplayDisableOnInteraction ={true}

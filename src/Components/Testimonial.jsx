@@ -45,16 +45,19 @@ import 'swiper/modules/navigation/navigation.min.css'
 // ]
 
 const Card = styled.div`
- height: 100vh;
+ height: 80vh;
  overflow-y: scroll;
 `
 const Image = styled.img`
-   width: 100%;
-   height: 450px;
+   width: 50%;
+   margin: 0  auto;
+   height: 50%;
    border-radius: 50%;
    object-fit: cover;
    @media screen and (max-width:568px){
-      height: 450px;
+      height: 50%;
+      width: 50%;
+      border-radius: 50%;
    }
 `
 const TitleWrapper = styled.div`
@@ -103,7 +106,7 @@ text-justify: inter-word;
 const Testimonial = () => {
     const [talks, setTalks] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/talks')
+        axios.get('https://secret-badlands-60025.herokuapp.com/talks')
             .then(res => setTalks(res.data))
             .catch(err => console.log(err))
     }, [])
@@ -116,7 +119,7 @@ const Testimonial = () => {
                 <Swiper
                     modules={[Navigation, Autoplay, Virtual, Pagination]}
                     navigation
-                    autoplay={{ delay: 5000, }}
+                    autoplay={{ delay: 3000, }}
                     pagination={{ clickable: true }}
                     loop={true}
                     slidesPerView={3}
@@ -143,7 +146,7 @@ const Testimonial = () => {
                     {
                         talks.map(testi => <SwiperSlide className='col-md-4' key={testi.id}>
                             <Card className="card">
-                                <Image src={testi.image} className="card-img-top img-fluid" alt="..." />
+                                <Image src={testi.image} className="" alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title text-center">{testi.name}</h5>
                                     <p className='text-center mb-0'>{testi.position}</p>
